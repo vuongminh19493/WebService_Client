@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<fieldset>
+    <legend>List Book</legend>
+    <table>
+        <tr cellpadding="2" cellspacing="2">
+            <td>BookId</td>
+            <td>Book Name</td>
+            <td>ISBN</td>
+        </tr>
+        @foreach (var b in ViewBag.listBooks)
+        {
+            <tr>
+                <td>@b.BookId</td>
+                <td>@b.Title</td>
+                <td>@b.ISBN</td>
+            </tr>
+        }
+    </table>
+</fieldset>
+</body>
+</html>
